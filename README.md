@@ -28,7 +28,7 @@ cd weather-app
 
 2️⃣ **Open `index.html` in a Browser**  
 ```sh
-open index.html
+open weatherwebpage.html
 ```
 
 ---
