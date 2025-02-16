@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <div class="container">
+        <div class="unit-toggle">
+            <label>
+                <input type="radio" name="unit" value="metric" checked> °C
+            </label>
+            <label>
+                <input type="radio" name="unit" value="imperial"> °F
+            </label>
+        </div>
+        
+        <div class="search-box">
+            <button onclick="getWeather()" aria-label="Search">
+                <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" alt="Search">
+            </button>
+            <input 
+                type="text" 
+                placeholder="Enter city name" 
+                id="cityInput"
+                aria-label="Enter city name"
+            >            
+            <button onclick="getLocation()" aria-label="Use current location">
+                <img src="https://cdn-icons-png.flaticon.com/512/535/535137.png" alt="Location">
+            </button>
+            <button onclick="addToFavorites()" aria-label="Add to favorites">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Favorite">
+            </button>
+        </div>
+        <div class="error" id="errorMsg">Invalid city name</div>
+
+        <div class="weather-info" id="weatherInfo">
+            <img src="https://openweathermap.org/img/wn/02d@2x.png" class="weather-icon" id="weatherIcon" alt="Weather Icon">
+            <h1 class="temp" id="temperature">22°C</h1>
+            <h2 class="city" id="cityName">London</h2>
+            
+            <div class="details">
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3081/3081163.png" alt="Humidity Icon">
+                    <div>
+                        <p class="humidity" id="humidity">60%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/512/172/172928.png" alt="Wind Icon">
+                    <div>
+                        <p class="wind" id="windSpeed">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="https://cdn-icons-png.flaticon.com/512/172/172915.png" alt="Pressure Icon">
+                    <div>
+                        <p class="pressure" id="pressure">1013 hPa</p>
+                        <p>Pressure</p>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast" id="forecast">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-cards" id="forecastCards"></div>
+            </div>
+        </div>
+        <div class="theme-switch">
+            <button onclick="toggleTheme()">
+              <i class="wi wi-day-sunny"></i>
+            </button>
+          </div>
+    </div>
+    <div class="favorites-container">
+        <h3>Favorite Cities</h3>
+        <div class="favorites-list" id="favoritesList"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
