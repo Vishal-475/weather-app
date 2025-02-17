@@ -40,12 +40,6 @@ open weatherwebpage.html
 
 ---
 
-### 📸 Screenshots  
-![image](https://github.com/user-attachments/assets/ca61739f-eeae-4129-b867-8d45654ae199)
-  
-
----
-
 ### 📜 License  
 This project is **open-source**. Feel free to use and improve it! 😊  
 
